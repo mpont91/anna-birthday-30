@@ -15,6 +15,13 @@
             <h1 class="text-4xl font-bold text-pink-700 mb-4">Happy 30 Birthday!</h1>
             <h1 class="text-4xl font-bold text-pink-700 mb-4">🎉🥂🍾🎁</h1>
             <div class="flex justify-center">
+                <button id="sing" class="text-gray-800 font-bold py-2 px-4 inline-flex items-center">
+                    <img src="sound.svg" alt="Music" width="50px"/>
+                    <span>Sing</span>
+                </button>
+                <img width="200px" alt="Dog giving happy birthday" src="/singing.gif"/>
+            </div>
+            <div class="flex justify-center">
                 <img width="200px" alt="Dog giving happy birthday" src="/dog.gif"/>
                 <img width="200px" alt="Cat showing love" src="/love.webp"/>
             </div>
@@ -60,3 +67,13 @@
         background-color: #fdfdfd;
     }
 </style>
+<script>
+    (function() {
+        const audio = new Audio('happy-birthday.mp3');
+        audio.loop = true;
+
+        document.getElementById('sing')?.addEventListener('click', ()=>{
+            audio.play();
+        });
+    })();
+</script>
